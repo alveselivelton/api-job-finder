@@ -5,8 +5,6 @@ import router from "./routes/router";
 
 config();
 
-const port = process.env.PORT;
-
 const app = express();
 
 app.use(cors());
@@ -16,6 +14,8 @@ app.use(express.json());
 app.use("/api", router);
 
 import main from "../config/conn";
+
+const port = process.env.PORT;
 
 app.listen(port, () => {
   console.log(`API Working in port ${port}!`);
