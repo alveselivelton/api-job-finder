@@ -7,9 +7,7 @@ config();
 
 const app = express();
 
-app.use(
-  cors({ credentials: true, origin: "https://api-job-finder.vercel.app" })
-);
+app.use(cors());
 
 app.use(express.json());
 
