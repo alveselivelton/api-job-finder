@@ -18,6 +18,6 @@ import main from "../config/conn";
 const port = process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`API Working in port ${port}!`);
+  console.log(`API Working in port ${port}! ⚡️`);
   main().catch((err) => console.log(err));
 });
