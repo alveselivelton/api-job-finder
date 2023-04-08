@@ -7,8 +7,22 @@ config();
 
 const app = express();
 
-app.use(cors());
-app.options("*", cors());
+app.use(
+  cors({
+    origin: true,
+    optionsSuccessStatus: 200,
+    credentials: true,
+  })
+);
+
+app.options(
+  "*",
+  cors({
+    origin: true,
+    optionsSuccessStatus: 200,
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
