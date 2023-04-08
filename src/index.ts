@@ -3,20 +3,13 @@ import router from "./routes/router";
 import express from "express";
 import cors from "cors";
 
-config();
-
-const corsConfig = {
-  origin: "*",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-};
-
 const app = express();
 
-app.use(cors(corsConfig));
+app.use(cors());
 
 app.use(express.json());
+
+config();
 
 app.use("/api", router);
 
