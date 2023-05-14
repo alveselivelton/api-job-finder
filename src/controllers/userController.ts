@@ -53,7 +53,7 @@ export const userController = {
 
       const secret = process.env.JWT_SECRET as string;
 
-      const token = jwt.sign({ id: user._id }, secret, { expiresIn: "7d" });
+      const token = jwt.sign({ id: user._id }, secret, { expiresIn: "1d" });
 
       return res.status(200).json({
         token,
